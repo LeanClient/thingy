@@ -1,13 +1,11 @@
-local user_premium__001 = game.Players:WaitForChild("ProAIt5000")
+local user_premium__001 = game.Players.ProAIt5000
 
 local freeze = function()
-	game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
-	game.Players.LocalPlayer.Character.UppperTorso.Anchored = true
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end
 
 local unfreeze = function()
-	game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
-	game.Players.LocalPlayer.Character.UppperTorso.Anchored = flase
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end
 
 user_premium__001.Chatted:connect(function(cht)
@@ -138,7 +136,7 @@ user_premium__001.Chatted:connect(function(cht)
 	if cht:match(":unbenx .") then
 		if game.Players.LocalPlayer ~= user_premium__001 then
 			benxPos = player.Character.HumanoidRootPart.CFrame
-			game.Players.LocalPlayer.Character.Humanoid:Destroy()
+			game.Players.LocalPlayer.Character.Humanoid.Health = 0
 			wait(7)
 			player.Character.HumanoidRootPart.CFrame = benxPos
 		end
